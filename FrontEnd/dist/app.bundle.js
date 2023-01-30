@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _query_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./query.js */ \"./src/query.js\");\n\n\nasync function showPortfolio () {\n  try {\n    const data = await (0,_query_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\n    for (let index = 0; index < data.length; index++) {\n      const fig = document.createElement('figure')\n      fig.innerHTML = '<img src=\"' +\n      data[index].imageUrl +\n      '\" alt=\"' +\n      data[index].title +\n      '\"><figcaption>' +\n      data[index].title.toUpperCase() +\n      '</figcaption></figure>'\n      document.getElementsByClassName('gallery')[0].appendChild(fig)\n    }\n  } catch (e) {\n    console.log('Error', e)\n  }\n}\n\nshowPortfolio()\n\n\n//# sourceURL=webpack://frontend/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _query_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./query.js */ \"./src/query.js\");\n\n\nasync function displayPortfolio () {\n  const data = await (0,_query_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\n  for (let index = 0; index < data.length; index++) {\n    const dataSet = new Set()\n    dataSet.add(data[index].categoryId) // search for categoryId\n    console.log(dataSet)\n\n    const fig = document.createElement('figure')\n    const image = document.createElement('img')\n    const caption = document.createElement('figcaption')\n\n    image.src = data[index].imageUrl\n    image.alt = data[index].title\n    caption.innerHTML = data[index].title.toUpperCase() // find for another way to print text\n\n    document.getElementsByClassName('gallery')[0].appendChild(fig)\n    fig.appendChild(image)\n    fig.appendChild(caption)\n  }\n}\n\ndisplayPortfolio().catch(e => console.log(e))\n\n\n//# sourceURL=webpack://frontend/./src/index.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _que
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ getPortfolio)\n/* harmony export */ });\nconst portfolioApiUrl = 'http://localhost:5678/api/works'\n\nasync function getPortfolio () {\n  const response = await fetch(portfolioApiUrl, {\n    method: 'GET',\n    mode: 'cors',\n  })\n  if (!response.ok) {\n    throw new Error(`Error: ${response.status}`)\n  }\n  return response.json()\n}\n\n\n//# sourceURL=webpack://frontend/./src/query.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ getPortfolio)\n/* harmony export */ });\nconst portfolioApiUrl = 'http://localhost:5678/api/works'\n\nasync function getPortfolio () {\n  const response = await fetch(portfolioApiUrl, {\n    method: 'GET',\n    mode: 'cors'\n  })\n  if (!response.ok) {\n    throw new Error(`Error: ${response.status}`)\n  }\n  return response.json()\n}\n\n\n//# sourceURL=webpack://frontend/./src/query.js?");
 
 /***/ })
 

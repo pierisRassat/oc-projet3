@@ -4,9 +4,7 @@ async function displayPortfolio () {
   const data = await getPortfolio()
 
   for (let index = 0; index < data.length; index++) {
-    const dataSet = new Set()
-    dataSet.add(data[index].categoryId) // search for categoryId
-    console.log(dataSet)
+    console.log(data[index].categoryId) // search for categoryId
 
     const fig = document.createElement('figure')
     const image = document.createElement('img')

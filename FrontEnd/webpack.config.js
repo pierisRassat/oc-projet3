@@ -5,6 +5,10 @@ module.exports = {
   entry: {
     app: "/src/index.js"
   },
+  devServer: {
+    static: './',
+    port: '8090'
+  },
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
