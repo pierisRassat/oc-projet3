@@ -22,4 +22,4 @@ async function displayPortfolio () {
   }
 }
 
-displayPortfolio().catch(e => console.log(e));
+displayPortfolio().catch(e => console.log(e))
