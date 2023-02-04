@@ -1,3 +1,4 @@
 .idea
 Session.vim
 .editorconfig
+*/node_modules/*
