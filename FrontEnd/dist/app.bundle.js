@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/filter.js":
+/*!***********************!*\
+  !*** ./src/filter.js ***!
+  \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _query_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./query.js */ \"./src/query.js\");\n\n\nasync function displayPortfolio (callback) {\n  const data = callback()\n\n  for (let index = 0; index < data.length; index++) {\n    const fig = document.createElement('figure')\n    const image = document.createElement('img')\n    const caption = document.createElement('figcaption')\n\n    image.src = data[index].imageUrl\n    image.alt = data[index].title\n    caption.innerHTML = data[index].title.toUpperCase() // find for another way to print the text\n\n    document.getElementsByClassName('gallery')[0].appendChild(fig)\n    fig.appendChild(image)\n    fig.appendChild(caption)\n  }\n}\n\ndisplayPortfolio(async () => await (0,_query_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()).catch(e => console.log(e))\n\n// here is trash code ;þ\n//    const dataSet = new Set()\n//    dataSet.add(data[index].categoryId) // search for categoryId\n//    console.log(dataSet)\n\n\n//# sourceURL=webpack://frontend/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst filterPortfolio = categoryId => portfolio =>\n  categoryId\n    ? portfolio.filter(({ categoryId: id }) => id === categoryId)\n    : portfolio\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (filterPortfolio);\n\n\n//# sourceURL=webpack://frontend/./src/filter.js?");
+
+/***/ }),
+
+/***/ "./src/portfolio.js":
+/*!**************************!*\
+  !*** ./src/portfolio.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _query_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./query.js */ \"./src/query.js\");\n/* harmony import */ var _filter_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./filter.js */ \"./src/filter.js\");\n\n\n\nconst displayPortfolio = async categoryId => {\n  const portfolio = await (0,_query_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n  const filtered = (0,_filter_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(categoryId)(portfolio)\n  const elements = Array.from(filtered)\n  const gallery = document.getElementsByClassName('gallery')[0]\n\n  while (gallery.firstChild) {\n    gallery.removeChild(gallery.firstChild)\n  }\n\n  elements.forEach(({ imageUrl, title }) => {\n    const fig = document.createElement('figure')\n    const image = document.createElement('img')\n    const caption = document.createElement('figcaption')\n\n    image.src = imageUrl\n    image.alt = title\n    caption.textContent = title.toUpperCase()\n\n    gallery.appendChild(fig)\n    fig.appendChild(image)\n    fig.appendChild(caption)\n  })\n}\n\nconst handleRadioChange = ({ target: { value } }) => {\n  const categoryId = value === '0' ? null : Number(value)\n  displayPortfolio(categoryId)\n}\n\nconst inputs = Array.from(document.querySelectorAll('input[type=\"radio\"]'))\ninputs.forEach(input => input.addEventListener('change', handleRadioChange))\n\ndocument.querySelector('input[value=\"0\"]').checked = true\ndisplayPortfolio()\n\n// const portfolioApiUrl = 'http://localhost:5678/api/works'\n// const handleError = error => {\n//   console.error(error)\n// }\n// \n// const fetchPortfolio = async () => {\n//   try {\n//     const response = await fetch(portfolioApiUrl, {\n//       method: 'GET',\n//       mode: 'cors'\n//     })\n//     if (!response.ok) {\n//       throw new Error(`Error: ${response.status}`)\n//     }\n//     return response.json()\n//   } catch (error) {\n//     handleError(error)\n//   }\n// }\n// \n// const filterPortfolio = categoryId => portfolio =>\n//   categoryId\n//     ? portfolio.filter(({ categoryId: id }) => id === categoryId)\n//     : portfolio\n// \n// const displayPortfolio = async categoryId => {\n//   const portfolio = await fetchPortfolio()\n//   const filtered = filterPortfolio(categoryId)(portfolio)\n//   const elements = Array.from(filtered)\n//   const gallery = document.getElementsByClassName('gallery')[0]\n// \n//   while (gallery.firstChild) {\n//     gallery.removeChild(gallery.firstChild)\n//   }\n// \n//   elements.forEach(({ imageUrl, title }) => {\n//     const fig = document.createElement('figure')\n//     const image = document.createElement('img')\n//     const caption = document.createElement('figcaption')\n// \n//     image.src = imageUrl\n//     image.alt = title\n//     caption.textContent = title.toUpperCase()\n// \n//     gallery.appendChild(fig)\n//     fig.appendChild(image)\n//     fig.appendChild(caption)\n//   })\n// }\n// \n// const handleRadioChange = ({ target: { value } }) => {\n//   const categoryId = value === '0' ? null : Number(value)\n//   displayPortfolio(categoryId)\n// }\n// \n// const inputs = Array.from(document.querySelectorAll('input[type=\"radio\"]'))\n// inputs.forEach(input => input.addEventListener('change', handleRadioChange))\n// \n// document.querySelector('input[value=\"0\"]').checked = true\n// displayPortfolio().catch(handleError)\n\n\n//# sourceURL=webpack://frontend/./src/portfolio.js?");
 
 /***/ }),
 
@@ -90,7 +100,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/portfolio.js");
 /******/ 	
 /******/ })()
 ;
