@@ -1,5 +1,6 @@
 import fetchPortfolio from './query.js'
 import filterPortfolio from './filter.js'
+import { handleError } from './error-handler.js'
 
 const displayPortfolio = async categoryId => {
   const portfolio = await fetchPortfolio()
@@ -35,4 +36,4 @@ const inputs = Array.from(document.querySelectorAll('input[type="radio"]'))
 inputs.forEach(input => input.addEventListener('change', handleRadioChange))
 
 document.querySelector('input[value="0"]').checked = true
-displayPortfolio()
+displayPortfolio().catch(handleError)

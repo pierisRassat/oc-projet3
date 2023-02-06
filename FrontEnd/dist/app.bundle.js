@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/error-handler.js":
+/*!******************************!*\
+  !*** ./src/error-handler.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"handleError\": () => (/* binding */ handleError)\n/* harmony export */ });\nconst handleError = error => {\n  console.error(error)\n}\n\n\n//# sourceURL=webpack://frontend/./src/error-handler.js?");
+
+/***/ }),
+
 /***/ "./src/filter.js":
 /*!***********************!*\
   !*** ./src/filter.js ***!
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _query_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./query.js */ \"./src/query.js\");\n/* harmony import */ var _filter_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./filter.js */ \"./src/filter.js\");\n\n\n\nconst displayPortfolio = async categoryId => {\n  const portfolio = await (0,_query_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n  const filtered = (0,_filter_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(categoryId)(portfolio)\n  const elements = Array.from(filtered)\n  const gallery = document.getElementsByClassName('gallery')[0]\n\n  while (gallery.firstChild) {\n    gallery.removeChild(gallery.firstChild)\n  }\n\n  elements.forEach(({ imageUrl, title }) => {\n    const fig = document.createElement('figure')\n    const image = document.createElement('img')\n    const caption = document.createElement('figcaption')\n\n    image.src = imageUrl\n    image.alt = title\n    caption.textContent = title.toUpperCase()\n\n    gallery.appendChild(fig)\n    fig.appendChild(image)\n    fig.appendChild(caption)\n  })\n}\n\nconst handleRadioChange = ({ target: { value } }) => {\n  const categoryId = value === '0' ? null : Number(value)\n  displayPortfolio(categoryId)\n}\n\nconst inputs = Array.from(document.querySelectorAll('input[type=\"radio\"]'))\ninputs.forEach(input => input.addEventListener('change', handleRadioChange))\n\ndocument.querySelector('input[value=\"0\"]').checked = true\ndisplayPortfolio()\n\n\n//# sourceURL=webpack://frontend/./src/portfolio.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _query_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./query.js */ \"./src/query.js\");\n/* harmony import */ var _filter_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./filter.js */ \"./src/filter.js\");\n/* harmony import */ var _error_handler_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./error-handler.js */ \"./src/error-handler.js\");\n\n\n\n\nconst displayPortfolio = async categoryId => {\n  const portfolio = await (0,_query_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n  const filtered = (0,_filter_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(categoryId)(portfolio)\n  const elements = Array.from(filtered)\n  const gallery = document.getElementsByClassName('gallery')[0]\n\n  while (gallery.firstChild) {\n    gallery.removeChild(gallery.firstChild)\n  }\n\n  elements.forEach(({ imageUrl, title }) => {\n    const fig = document.createElement('figure')\n    const image = document.createElement('img')\n    const caption = document.createElement('figcaption')\n\n    image.src = imageUrl\n    image.alt = title\n    caption.textContent = title.toUpperCase()\n\n    gallery.appendChild(fig)\n    fig.appendChild(image)\n    fig.appendChild(caption)\n  })\n}\n\nconst handleRadioChange = ({ target: { value } }) => {\n  const categoryId = value === '0' ? null : Number(value)\n  displayPortfolio(categoryId)\n}\n\nconst inputs = Array.from(document.querySelectorAll('input[type=\"radio\"]'))\ninputs.forEach(input => input.addEventListener('change', handleRadioChange))\n\ndocument.querySelector('input[value=\"0\"]').checked = true\ndisplayPortfolio().catch(_error_handler_js__WEBPACK_IMPORTED_MODULE_2__.handleError)\n\n\n//# sourceURL=webpack://frontend/./src/portfolio.js?");
 
 /***/ }),
 
