@@ -125,6 +125,41 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
+/* portfolio filters stylin' */
+.portfolio-filter {
+    /*
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    */
+    display: flex;
+    flex-flow: row nowrap;
+	margin : 2em 0 2em;
+    justify-content: center;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+    display: flex;
+    align-items: center;
+	font-family: 'Syne';
+	font-weight: 700;
+	color: #1D6154;
+	background-color: white;
+    height: 2em;
+    width: auto;
+    margin: 10px 10px 10px;
+    padding: 0 14px 0;
+	text-align: center;
+	border: 1px solid #1D6154;
+	border-radius: 60px ;
+}
+input[type="radio"] + label:hover {
+	background-color: #1D6154;
+    color: white;
+}
+/* end portfolio filters stylin' */
 .gallery {
 	width: 100%;
 	display: grid;
