@@ -1,6 +1,6 @@
 import { handleError } from './error-handler.js'
 
-const portfolioApiUrl = 'http://localhost:5678/api/works'
+const portfolioApiUrl = 'http://localhost:5679/ap/works'
 
 const fetchPortfolio = async () => {
   try {

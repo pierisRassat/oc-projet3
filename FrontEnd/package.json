@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack build",
     "start": "webpack serve",
-    "test": "jest"
+    "test": "jest ./__test__"
   },
   "author": "pieris rassat @framend",
   "license": "ISC",
