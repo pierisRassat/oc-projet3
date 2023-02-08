@@ -127,11 +127,6 @@ li:hover {
 }
 /* portfolio filters stylin' */
 .portfolio-filter {
-    /*
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    */
     display: flex;
     flex-flow: row nowrap;
 	margin : 2em 0 2em;
@@ -172,15 +167,30 @@ input[type="radio"] + label:hover {
 	width: 100%;
 
 }
-#login {
-	width: 50%;
-margin: auto;
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
 }
-#contact login {
+
+.gallery img {
+	width: 100%;
+
+}
+#login {
+    display: flex;
+    flex-flow: column;
+	width: 50%;
+    margin: auto;
+    justify-content: center;
+}
+#login > * {
 	text-align: center;
 
 }
-#contact login{
+#login h2{
 	margin-bottom: 20px;
 }
 #login form {
@@ -200,6 +210,42 @@ margin: auto;
 	margin: 2em 0 1em 0;
 }
 #login textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#login a {
+    color: #3D3D3D;
+}
+
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
@@ -213,47 +259,6 @@ input[type="submit"]{
 	width: 180px;
 	text-align: center;
 	border-radius: 60px ;
-}
-
-#login {
-	width: 50%;
-margin: auto;
-}
-#login {
-	text-align: center;
-
-}
-#login{
-	margin-bottom: 20px;
-}
-#login form {
-	text-align: left;
-	margin-top:30px;
-	display: flex;
-	flex-direction: column;
-}
-
-#login input {
-	height: 50px;
-	font-size: 1.2em;
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
-}
-#login label {
-	margin: 2em 0 1em 0;
-}
-#login textarea {
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
-}
-#login a {
-    color: #3D3D3D;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }
 
 footer nav ul {
