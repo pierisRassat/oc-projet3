@@ -1,7 +1,7 @@
-import { initRadioInputs, handleRadioChange } from './handleRadioChange.js'
-import { displayPortfolio } from './portfolio.js'
-import displayPortfolioFilter from './categories.js'
-import addLoginListener from './addLoginListener.js'
+import { initRadioInputs, handleRadioChange } from './categories/handleRadioChange.js'
+import { displayPortfolio } from './works/portfolio.js'
+import displayPortfolioFilter from './categories/categories.js'
+import addLoginListener from './login/addLoginListener.js'
 
 addLoginListener()
 

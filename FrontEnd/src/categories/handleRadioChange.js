@@ -1,4 +1,4 @@
-import { displayPortfolio } from './portfolio.js'
+import { displayPortfolio } from '../works/portfolio.js'
 
 const initRadioInputs = () => {
   const inputs = Array.from(document.querySelectorAll('input[type="radio"]'))
