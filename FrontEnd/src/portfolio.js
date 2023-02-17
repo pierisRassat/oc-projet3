@@ -1,16 +1,11 @@
-import fetchPortfolio from './query.js'
-import filterPortfolio from './filter.js'
-import { handleError } from './error-handler.js'
+import clearGallery from './clearGallery.js'
+import getPortfolio from './getPortfolio.js'
 
-const displayPortfolio = async categoryId => {
-  const portfolio = await fetchPortfolio()
-  const filtered = filterPortfolio(categoryId)(portfolio)
-  const elements = Array.from(filtered)
-  const gallery = document.getElementsByClassName('gallery')[0]
-
-  while (gallery.firstChild) {
-    gallery.removeChild(gallery.firstChild)
-  }
+export const displayPortfolio = async categoryId => {
+  clearGallery()
+  const portfolio = await getPortfolio()
+  const elements = portfolio.filter(categoryId)
+  const gallery = document.querySelector('.gallery')
 
   elements.forEach(({ imageUrl, title }) => {
     const fig = document.createElement('figure')
@@ -26,14 +21,3 @@ const displayPortfolio = async categoryId => {
     fig.appendChild(caption)
   })
 }
-
-const handleRadioChange = ({ target: { value } }) => {
-  const categoryId = value === '0' ? null : Number(value)
-  displayPortfolio(categoryId)
-}
-
-const inputs = Array.from(document.querySelectorAll('input[type="radio"]'))
-inputs.forEach(input => input.addEventListener('change', handleRadioChange))
-
-document.querySelector('input[value="0"]').checked = true
-displayPortfolio().catch(handleError)

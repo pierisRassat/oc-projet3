@@ -8,5 +8,13 @@ export default async function getPortfolio () {
   if (!response.ok) {
     throw new Error(`Error: ${response.status}`)
   }
-  return response.json()
+  return {
+    data: await response.json(),
+    filter: function (categoryId) {
+      return categoryId
+        ? this.data.filter(
+          ({ categoryId: id }) => id === categoryId)
+        : this.data
+    }
+  }
 }
