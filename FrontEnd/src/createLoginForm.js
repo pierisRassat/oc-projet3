@@ -7,7 +7,7 @@ export default function createLoginForm () {
   section.appendChild(title)
 
   const form = document.createElement('form')
-  form.setAttribute('action', './src/login.js')
+  form.setAttribute('action', './login.js')
   form.setAttribute('method', 'post')
 
   const emailLabel = document.createElement('label')
