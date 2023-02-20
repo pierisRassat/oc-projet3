@@ -1,3 +1,5 @@
+import handleLoginFormSubmit from './testLoginForm.js'
+
 export default function createLoginForm () {
   const section = document.createElement('section')
   section.setAttribute('id', 'login')
@@ -7,7 +9,7 @@ export default function createLoginForm () {
   section.appendChild(title)
 
   const form = document.createElement('form')
-  form.setAttribute('action', './login.js')
+  // form.setAttribute('action', './login.js')
   form.setAttribute('method', 'post')
 
   const emailLabel = document.createElement('label')
@@ -49,5 +51,6 @@ export default function createLoginForm () {
   const selected = document.querySelector('nav ul li#login')
   selected.style.fontWeight = 'bold'
 
+  form.addEventListener('submit', handleLoginFormSubmit)
   return section
 }
