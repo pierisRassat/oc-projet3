@@ -3,7 +3,8 @@ const categoriesApiUrl = 'http://localhost:5678/api/categories'
 export async function getCategories () {
   const response = await fetch(categoriesApiUrl, {
     method: 'GET',
-    mode: 'cors'
+    mode: 'cors',
+    'Content-Type': 'application/json;charset=utf-8'
   })
   if (!response.ok) {
     throw new Error(`Error: ${response.status}`)
