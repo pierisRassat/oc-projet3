@@ -1,7 +1,8 @@
 import createLoginForm from './createLoginForm.js'
+import handleLoginFormSubmit from './testLoginForm.js'
 
 export default function addLoginListener () {
-  const loginButton = document.querySelector('nav ul li#login')
+  const loginButton = document.querySelector('nav ul li#login ')
   const main = document.querySelector('main')
 
   loginButton.addEventListener('click', () => {
@@ -10,5 +11,7 @@ export default function addLoginListener () {
     }
 
     main.appendChild(createLoginForm())
+
+    handleLoginFormSubmit()
   })
 }

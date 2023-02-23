@@ -1,31 +1,20 @@
-import { initRadioInputs, handleRadioChange } from './categories/handleRadioChange.js'
-import { displayPortfolio } from './works/portfolio.js'
-import displayPortfolioFilter from './categories/categories.js'
+import { initRadioInputs, handleRadioChange } from './categories/handleRadioChange.js' // init and handle portfolio filters
+import displayPortfolioFilter from './categories/categories.js' // display portfolio filters
+import { displayPortfolio } from './works/portfolio.js' // display portfolio gallery
 import addLoginListener from './login/addLoginListener.js'
-// import handleLoginFormSubmit from './login/testLoginForm.js'
-// import handleLoginFormSubmit from './login/authApi.js'
-// 
-// const loginForm = document.querySelector('nav ul li#login')
-// 
-// loginForm.addEventListener('submit', (event) => {
-//   event.preventDefault()
-//   handleLoginFormSubmit(event)
-// })
 
 addLoginListener()
 
-async function displayFilters () {
+async function displayFilters () { // display portfolio filters
   await displayPortfolioFilter()
 }
 displayFilters()
 
-displayPortfolio()
+displayPortfolio() // display portfolio gallery
 
-async function initButtons () {
+async function initButtons () { // init portfolio filters
   await initRadioInputs()
 }
 initButtons()
 
-handleRadioChange()
-
-// handleLoginFormSubmit()
+handleRadioChange() // handle portfolio filters

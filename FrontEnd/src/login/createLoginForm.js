@@ -38,6 +38,7 @@ export default function createLoginForm () {
 
   const submitInput = document.createElement('input')
   submitInput.setAttribute('type', 'submit')
+  submitInput.setAttribute('id', 'submitLoginForm')
   submitInput.setAttribute('value', 'Se connecter')
   form.appendChild(submitInput)
 
