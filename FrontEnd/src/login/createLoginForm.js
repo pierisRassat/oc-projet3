@@ -1,4 +1,4 @@
-import handleLoginFormSubmit from './testLoginForm.js'
+import handleLoginFormSubmit from './postLogin.js'
 
 export default function createLoginForm () {
   const section = document.createElement('section')
@@ -9,7 +9,6 @@ export default function createLoginForm () {
   section.appendChild(title)
 
   const form = document.createElement('form')
-  // form.setAttribute('action', './login.js')
   form.setAttribute('method', 'post')
 
   const emailLabel = document.createElement('label')

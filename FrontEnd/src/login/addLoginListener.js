@@ -1,5 +1,5 @@
 import createLoginForm from './createLoginForm.js'
-import handleLoginFormSubmit from './testLoginForm.js'
+import handleLoginFormSubmit from './postLogin.js'
 
 export default function addLoginListener () {
   const loginButton = document.querySelector('nav ul li#login ')

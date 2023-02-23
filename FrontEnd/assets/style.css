@@ -125,7 +125,6 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
-/* portfolio filters stylin' */
 .portfolio-filter {
     display: flex;
     flex-flow: row nowrap;
@@ -154,7 +153,6 @@ input[type="radio"] + label:hover {
 	background-color: #1D6154;
     color: white;
 }
-/* end portfolio filters stylin' */
 .gallery {
 	width: 100%;
 	display: grid;

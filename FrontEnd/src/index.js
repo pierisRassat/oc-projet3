@@ -1,7 +1,10 @@
 import { initRadioInputs, handleRadioChange } from './categories/handleRadioChange.js' // init and handle portfolio filters
 import displayPortfolioFilter from './categories/categories.js' // display portfolio filters
 import { displayPortfolio } from './works/portfolio.js' // display portfolio gallery
-import addLoginListener from './login/addLoginListener.js'
+import addLoginListener from './login/addLoginListener.js' // listen for login form to display
+import { checkLocalStorageToken } from './isLogged/isLogged.js'
+
+checkLocalStorageToken()
 
 addLoginListener()
 
