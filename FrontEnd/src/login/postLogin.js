@@ -17,19 +17,13 @@ export default async function handleLoginFormSubmit () {
 
     if (response.ok) {
       const token = await response.json()
-      localStorage.setItem('token', token)
-      console.log(token)
+      window.localStorage.setItem('token', token)
       window.location.href = 'index.html'
     } else {
       const errorMessage = await response.json().message
-      alert('Email ou mot de passe incorrect')
+      window.alert('Email ou mot de passe incorrect')
+      window.message('Allo ?')
       console.error(errorMessage)
-    }
-    const isTokenStored = localStorage.getItem('token')
-    if (isTokenStored) {
-      console.log('token stored in localStorage')
-    } else {
-      console.log('token not stored')
     }
   })
 }

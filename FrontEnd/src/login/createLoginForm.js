@@ -49,7 +49,7 @@ export default function createLoginForm () {
   section.appendChild(forgotPasswordLink)
 
   const selected = document.querySelector('nav ul li#login')
-  selected.style.fontWeight = 'bold'
+  selected.style.fontWeight = 'bold' // create "bold" class
 
   form.addEventListener('submit', handleLoginFormSubmit)
   return section

@@ -49,9 +49,44 @@ table {
 /** end reset css**/
 body {
 	max-width: 1140px;
-	margin:auto;
+	margin: auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
+    position: relative;
+}
+.edit-mode {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+#edition-mode-banner {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 59px;
+    margin: 0;
+    overflow: visible;
+    background-color: #000;
+}
+#edition-mode-title {
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+#edition-mode-title p {
+    color: #EEE;
+    margin: 0 21px 0 13px;
+}
+#edition-mode-banner button {
+    height: 38px;
+    background-color: #EEE;
+    border: 1px solid #EEE;
+    border-radius: 60px;
+    padding: 0 23px 0 23px;
+    font-weight: 500;
 }
 header {
 	display: flex;
