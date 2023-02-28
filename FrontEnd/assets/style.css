@@ -49,27 +49,30 @@ table {
 /** end reset css**/
 body {
 	max-width: 1140px;
-	margin: auto;
+	margin:auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
-    position: relative;
 }
 .edit-mode {
-    position: absolute;
-    width: 100%;
-    height: auto;
+    float: left;
+    width: 100vw;
     overflow: visible;
+    margin-bottom: 38px;
+    margin-left: -10%;
 }
 #edition-mode-banner {
     display: flex;
     flex-flow: row nowrap;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 59px;
-    margin: 0;
-    overflow: visible;
     background-color: #000;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
 }
 #edition-mode-title {
     margin: 0;
@@ -160,14 +163,40 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
+#portfolio a {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+}
+.edit-projects-btn {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.edit-projects-btn img {
+    margin-left: 31px;
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+}
+#btn-container {
+    margin-left: 10%;
+    margin-top: 16px;
+}
+#btn-container img {
+    margin-right: 12px;
+    float: left;
+    width: 15px;
+    height: 15px;
+}
 .portfolio-filter {
     display: flex;
     flex-flow: row nowrap;
-	margin : 2em 0 2em;
+    margin : 2em 0 2em;
     justify-content: center;
 }
 input[type="radio"] {
-  display: none;
+    display: none;
 }
 input[type="radio"] + label {
     display: flex;

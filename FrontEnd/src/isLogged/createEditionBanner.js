@@ -8,7 +8,8 @@ export default function createEditionBanner () {
   editionModeTitle.setAttribute('id', 'edition-mode-title')
 
   const editionIcon = document.createElement('img')
-  editionIcon.setAttribute('src', './assets/icons/edit.svg')
+  editionIcon.setAttribute('src', './assets/icons/white-edit.svg')
+  editionIcon.setAttribute('alt', 'edition icon')
 
   const editionModeTitleText = document.createElement('p')
   editionModeTitleText.textContent = 'Mode édition'
