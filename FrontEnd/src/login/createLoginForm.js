@@ -1,4 +1,4 @@
-import handleLoginFormSubmit from './postLogin.js'
+import handleLoginFormSubmit from './requestLogin.js'
 
 export default function createLoginForm () {
   const section = document.createElement('section')

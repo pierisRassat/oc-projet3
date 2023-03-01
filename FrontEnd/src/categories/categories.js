@@ -1,6 +1,6 @@
 import { handleRadioChange } from './handleRadioChange.js'
 
-import { getCategories } from './getCategories.js'
+import { getCategories } from './requestCategories.js'
 
 function createButton (name, id, index) {
   const input = document.createElement('input')

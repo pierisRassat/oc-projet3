@@ -1,5 +1,5 @@
 import clearGallery from './clearGallery.js'
-import getPortfolio from './getPortfolio.js'
+import getPortfolio from './requestPortfolio.js'
 
 export const displayPortfolio = async categoryId => {
   clearGallery()
