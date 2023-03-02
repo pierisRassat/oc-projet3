@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/app.js":
+/*!********************!*\
+  !*** ./src/app.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _categories_handleRadioChange_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./categories/handleRadioChange.js */ \"./src/categories/handleRadioChange.js\");\n/* harmony import */ var _categories_categories_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./categories/categories.js */ \"./src/categories/categories.js\");\n/* harmony import */ var _works_portfolio_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./works/portfolio.js */ \"./src/works/portfolio.js\");\n/* harmony import */ var _isLogged_isLogged_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./isLogged/isLogged.js */ \"./src/isLogged/isLogged.js\");\n // init and handle portfolio filters\n // display portfolio filters\n // display portfolio gallery\n // check if the user is logged\n\n(0,_isLogged_isLogged_js__WEBPACK_IMPORTED_MODULE_3__.checkLocalStorageToken)() // is user logged ?\n\nasync function displayFilters () { // display portfolio filters\n  await (0,_categories_categories_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n}\ndisplayFilters()\n\n;(0,_works_portfolio_js__WEBPACK_IMPORTED_MODULE_2__.displayPortfolio)() // display portfolio gallery\n\nasync function initButtons () { // init portfolio filters\n  await (0,_categories_handleRadioChange_js__WEBPACK_IMPORTED_MODULE_0__.initRadioInputs)()\n}\ninitButtons()\n\n;(0,_categories_handleRadioChange_js__WEBPACK_IMPORTED_MODULE_0__.handleRadioChange)() // handle portfolio filters\n\n\n//# sourceURL=webpack://frontend/./src/app.js?");
+
+/***/ }),
+
 /***/ "./src/categories/categories.js":
 /*!**************************************!*\
   !*** ./src/categories/categories.js ***!
@@ -40,23 +50,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _categories_handleRadioChange_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./categories/handleRadioChange.js */ \"./src/categories/handleRadioChange.js\");\n/* harmony import */ var _categories_categories_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./categories/categories.js */ \"./src/categories/categories.js\");\n/* harmony import */ var _works_portfolio_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./works/portfolio.js */ \"./src/works/portfolio.js\");\n/* harmony import */ var _isLogged_isLogged_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./isLogged/isLogged.js */ \"./src/isLogged/isLogged.js\");\n // init and handle portfolio filters\n // display portfolio filters\n // display portfolio gallery\n // check if the user is logged\n\n(0,_isLogged_isLogged_js__WEBPACK_IMPORTED_MODULE_3__.checkLocalStorageToken)() // is user logged ?\n\nasync function displayFilters () { // display portfolio filters\n  await (0,_categories_categories_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n}\ndisplayFilters()\n\n;(0,_works_portfolio_js__WEBPACK_IMPORTED_MODULE_2__.displayPortfolio)() // display portfolio gallery\n\nasync function initButtons () { // init portfolio filters\n  await (0,_categories_handleRadioChange_js__WEBPACK_IMPORTED_MODULE_0__.initRadioInputs)()\n}\ninitButtons()\n\n;(0,_categories_handleRadioChange_js__WEBPACK_IMPORTED_MODULE_0__.handleRadioChange)() // handle portfolio filters\n\n\n//# sourceURL=webpack://frontend/./src/index.js?");
-
-/***/ }),
-
 /***/ "./src/isLogged/createEditionBanner.js":
 /*!*********************************************!*\
   !*** ./src/isLogged/createEditionBanner.js ***!
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createEditionBanner)\n/* harmony export */ });\nfunction createEditionBanner () {\n  const divEditMode = document.querySelector('.edit-mode')\n\n  const section = document.createElement('section')\n  section.setAttribute('id', 'edition-mode-banner')\n\n  const editionModeTitle = document.createElement('div')\n  editionModeTitle.setAttribute('id', 'edition-mode-title')\n\n  const editionIcon = document.createElement('img')\n  editionIcon.setAttribute('src', './assets/icons/white-edit.svg')\n  editionIcon.setAttribute('alt', 'edition icon')\n\n  const editionModeTitleText = document.createElement('p')\n  editionModeTitleText.textContent = 'Mode édition'\n\n  const editionModePublishButton = document.createElement('button')\n  editionModePublishButton.textContent = 'publier les changements'\n\n  editionModeTitle.appendChild(editionIcon)\n  editionModeTitle.appendChild(editionModeTitleText)\n  section.appendChild(editionModeTitle)\n  section.appendChild(editionModePublishButton)\n  divEditMode.appendChild(section)\n\n  return section\n}\n\n\n//# sourceURL=webpack://frontend/./src/isLogged/createEditionBanner.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createEditionBanner)\n/* harmony export */ });\nfunction createEditionBanner () {\n  const divEditMode = document.querySelector('.edit-mode')\n\n  const section = document.createElement('section')\n  section.setAttribute('id', 'edition-mode-banner')\n\n  const editionModeTitle = document.createElement('div')\n  editionModeTitle.setAttribute('id', 'edition-mode-title')\n\n  const editionIcon = document.createElement('img')\n  editionIcon.setAttribute('src', './assets/icons/white-edit.svg')\n  editionIcon.setAttribute('alt', 'edition icon')\n\n  const editionModeTitleText = document.createElement('p')\n  editionModeTitleText.textContent = 'Mode édition'\n\n  const editionModePublishButton = document.createElement('button')\n  editionModePublishButton.textContent = 'publier les changements'\n\n  const header = document.querySelector('header')\n  header.style.marginTop = '96px'\n\n  editionModeTitle.appendChild(editionIcon)\n  editionModeTitle.appendChild(editionModeTitleText)\n  section.appendChild(editionModeTitle)\n  section.appendChild(editionModePublishButton)\n  divEditMode.appendChild(section)\n\n  return section\n}\n\n\n//# sourceURL=webpack://frontend/./src/isLogged/createEditionBanner.js?");
 
 /***/ }),
 
@@ -110,13 +110,33 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/modalEditMode/addCloseModaleListener.js":
+/*!*****************************************************!*\
+  !*** ./src/modalEditMode/addCloseModaleListener.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ addCloseModaleListener)\n/* harmony export */ });\nfunction addCloseModaleListener () {\n  const closeBtn = document.querySelector('.close-modal-btn')\n\n  closeBtn.addEventListener('click', (event) => {\n    const modal = document.querySelectorAll('.modal')\n    event.preventDefault()\n    console.log('closeBtn clicked')\n    if (typeof (modal) !== 'undefined' && modal !== null) {\n      console.log('modal is not null')\n      modal.classList.remove('modal')\n      modal.classList.add('hidden')\n    }\n  })\n}\n\n\n//# sourceURL=webpack://frontend/./src/modalEditMode/addCloseModaleListener.js?");
+
+/***/ }),
+
 /***/ "./src/modalEditMode/addEditListener.js":
 /*!**********************************************!*\
   !*** ./src/modalEditMode/addEditListener.js ***!
   \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ addEditListener)\n/* harmony export */ });\n/* harmony import */ var _createModale_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createModale.js */ \"./src/modalEditMode/createModale.js\");\n\n\nfunction addEditListener () {\n  const editButton = document.querySelector('.edit-projects-btn a')\n\n  editButton.addEventListener('click', () => {\n    ;(0,_createModale_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n  })\n}\n\n\n//# sourceURL=webpack://frontend/./src/modalEditMode/addEditListener.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ addEditListener)\n/* harmony export */ });\n/* harmony import */ var _createModale_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createModale.js */ \"./src/modalEditMode/createModale.js\");\n/* harmony import */ var _addCloseModaleListener_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addCloseModaleListener.js */ \"./src/modalEditMode/addCloseModaleListener.js\");\n\n\n\nfunction addEditListener () {\n  const editButton = document.querySelector('.edit-projects-btn a')\n\n  editButton.addEventListener('click', (event) => {\n    event.preventDefault()\n    ;(0,_createModale_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n    ;(0,_addCloseModaleListener_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n  })\n}\n\n\n//# sourceURL=webpack://frontend/./src/modalEditMode/addEditListener.js?");
+
+/***/ }),
+
+/***/ "./src/modalEditMode/clearThumbnailGallery.js":
+/*!****************************************************!*\
+  !*** ./src/modalEditMode/clearThumbnailGallery.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ clearThumbnailGallery)\n/* harmony export */ });\nfunction clearThumbnailGallery () {\n  const thumbnailGallery = document.querySelector('.thumbnail-portfolio-container')\n  if (typeof (thumbnailGallery) !== 'undefined' && thumbnailGallery !== null) {\n    while (thumbnailGallery.firstChild) {\n      thumbnailGallery.removeChild(thumbnailGallery.firstChild)\n    }\n  } else {\n    console.error('thumbnailGallery element is not set in DOM')\n  }\n}\n\n\n//# sourceURL=webpack://frontend/./src/modalEditMode/clearThumbnailGallery.js?");
 
 /***/ }),
 
@@ -126,7 +146,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createModale)\n/* harmony export */ });\n/* harmony import */ var _works_requestPortfolio_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../works/requestPortfolio.js */ \"./src/works/requestPortfolio.js\");\n\n\nfunction createModale () {\n  const editButton = document.querySelector('.edit-projects-btn a')\n\n  const modal = document.createElement('div')\n  modal.setAttribute('class', 'modal')\n\n  const wrapper = document.createElement('div')\n  wrapper.setAttribute('class', 'wrapper')\n\n  const closeBtn = document.createElement('button')\n  closeBtn.setAttribute('class', 'close-modal-btn')\n\n  const closeBtnImg = document.createElement('img')\n  closeBtnImg.setAttribute('src', './assets/icons/cross.svg')\n\n  const title = document.createElement('h2')\n  title.textContent = 'Galerie photo'\n\n  const thumbnailPortfolio = document.createElement('div')\n  thumbnailPortfolio.setAttribute('class', 'thumbnail-portfolio-container')\n\n  const trashIconContainer = document.createElement('div')\n  trashIconContainer.setAttribute('class', 'trash-icon-container')\n\n  const trashIcon = document.createElement('img')\n  trashIcon.setAttribute('src', './assets/icons/trash.svg')\n\n  const addWorkBtn = document.createElement('input')\n  addWorkBtn.setAttribute('class', 'add-work-btn')\n  addWorkBtn.setAttribute('type', 'submit')\n  addWorkBtn.setAttribute('value', 'Ajouter une photo')\n\n  const removeGallery = document.createElement('input')\n  removeGallery.setAttribute('class', 'remove-gallery-btn')\n  removeGallery.setAttribute('type', 'button')\n  removeGallery.setAttribute('value', 'Supprimer la gallerie')\n\n  editButton.appendChild(modal)\n  modal.appendChild(wrapper)\n  wrapper.appendChild(closeBtn)\n  closeBtn.appendChild(closeBtnImg)\n  wrapper.appendChild(title)\n  wrapper.appendChild(thumbnailPortfolio)\n  wrapper.appendChild(trashIconContainer)\n  trashIconContainer.appendChild(trashIcon)\n  wrapper.appendChild(addWorkBtn)\n  wrapper.appendChild(removeGallery)\n}\n\n\n//# sourceURL=webpack://frontend/./src/modalEditMode/createModale.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createModale)\n/* harmony export */ });\n/* harmony import */ var _portfolioThumbnails_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./portfolioThumbnails.js */ \"./src/modalEditMode/portfolioThumbnails.js\");\n\n\nfunction createModale () {\n  const editButton = document.querySelector('.edit-projects-btn a')\n\n  const modal = document.createElement('div')\n  modal.setAttribute('class', 'modal')\n\n  const wrapper = document.createElement('div')\n  wrapper.setAttribute('class', 'wrapper')\n\n  const closeBtn = document.createElement('button')\n  closeBtn.setAttribute('class', 'close-modal-btn')\n\n  const closeBtnImg = document.createElement('img')\n  closeBtnImg.setAttribute('src', './assets/icons/cross.svg')\n\n  const title = document.createElement('h2')\n  title.textContent = 'Galerie photo'\n\n  const thumbnailPortfolio = document.createElement('div')\n  thumbnailPortfolio.setAttribute('class', 'thumbnail-portfolio-container')\n\n  const addWorkBtn = document.createElement('input')\n  addWorkBtn.setAttribute('class', 'add-work-btn')\n  addWorkBtn.setAttribute('type', 'submit')\n  addWorkBtn.setAttribute('value', 'Ajouter une photo')\n\n  const removeGalleryBtn = document.createElement('input')\n  removeGalleryBtn.setAttribute('class', 'remove-gallery-btn')\n  removeGalleryBtn.setAttribute('type', 'button')\n  removeGalleryBtn.setAttribute('value', 'Supprimer la gallerie')\n\n  editButton.appendChild(modal)\n  modal.appendChild(wrapper)\n  wrapper.appendChild(closeBtn)\n  closeBtn.appendChild(closeBtnImg)\n  wrapper.appendChild(title)\n  wrapper.appendChild(thumbnailPortfolio, (0,_portfolioThumbnails_js__WEBPACK_IMPORTED_MODULE_0__.displayPortfolioThumbnails)())\n  wrapper.appendChild(addWorkBtn)\n  wrapper.appendChild(removeGalleryBtn)\n  title.focus()\n}\n\n\n//# sourceURL=webpack://frontend/./src/modalEditMode/createModale.js?");
+
+/***/ }),
+
+/***/ "./src/modalEditMode/portfolioThumbnails.js":
+/*!**************************************************!*\
+  !*** ./src/modalEditMode/portfolioThumbnails.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayPortfolioThumbnails\": () => (/* binding */ displayPortfolioThumbnails)\n/* harmony export */ });\n/* harmony import */ var _clearThumbnailGallery_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clearThumbnailGallery.js */ \"./src/modalEditMode/clearThumbnailGallery.js\");\n/* harmony import */ var _works_requestPortfolio_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../works/requestPortfolio.js */ \"./src/works/requestPortfolio.js\");\n\n\n\nconst displayPortfolioThumbnails = async categoryId => {\n  (0,_clearThumbnailGallery_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n  const portfolio = await (0,_works_requestPortfolio_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n  const elements = portfolio.filter(categoryId)\n  const gallery = document.querySelector('.thumbnail-portfolio-container')\n\n  elements.forEach(({ imageUrl, title }) => {\n    const trashIconContainer = document.createElement('div')\n    trashIconContainer.setAttribute('class', 'trash-icon-container')\n\n    const trashIcon = document.createElement('img')\n    trashIcon.setAttribute('class', 'trash-icon')\n    trashIcon.setAttribute('src', './assets/icons/trash.svg')\n\n    const fig = document.createElement('figure')\n    const image = document.createElement('img')\n    const caption = document.createElement('figcaption')\n\n    image.src = imageUrl\n    image.alt = title\n    caption.textContent = 'éditer'\n\n    gallery.appendChild(fig)\n    fig.appendChild(image)\n    fig.appendChild(trashIconContainer)\n    trashIconContainer.appendChild(trashIcon)\n    fig.appendChild(caption)\n  })\n}\n\n\n//# sourceURL=webpack://frontend/./src/modalEditMode/portfolioThumbnails.js?");
 
 /***/ }),
 
@@ -220,7 +250,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/app.js");
 /******/ 	
 /******/ })()
 ;

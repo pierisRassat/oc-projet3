@@ -17,6 +17,9 @@ export default function createEditionBanner () {
   const editionModePublishButton = document.createElement('button')
   editionModePublishButton.textContent = 'publier les changements'
 
+  const header = document.querySelector('header')
+  header.style.marginTop = '96px'
+
   editionModeTitle.appendChild(editionIcon)
   editionModeTitle.appendChild(editionModeTitleText)
   section.appendChild(editionModeTitle)

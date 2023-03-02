@@ -1,4 +1,4 @@
-import getPortfolio from '../works/requestPortfolio.js'
+import { displayPortfolioThumbnails } from './portfolioThumbnails.js'
 
 export default function createModale () {
   const editButton = document.querySelector('.edit-projects-btn a')
@@ -21,30 +21,23 @@ export default function createModale () {
   const thumbnailPortfolio = document.createElement('div')
   thumbnailPortfolio.setAttribute('class', 'thumbnail-portfolio-container')
 
-  const trashIconContainer = document.createElement('div')
-  trashIconContainer.setAttribute('class', 'trash-icon-container')
-
-  const trashIcon = document.createElement('img')
-  trashIcon.setAttribute('src', './assets/icons/trash.svg')
-
   const addWorkBtn = document.createElement('input')
   addWorkBtn.setAttribute('class', 'add-work-btn')
   addWorkBtn.setAttribute('type', 'submit')
   addWorkBtn.setAttribute('value', 'Ajouter une photo')
 
-  const removeGallery = document.createElement('input')
-  removeGallery.setAttribute('class', 'remove-gallery-btn')
-  removeGallery.setAttribute('type', 'button')
-  removeGallery.setAttribute('value', 'Supprimer la gallerie')
+  const removeGalleryBtn = document.createElement('input')
+  removeGalleryBtn.setAttribute('class', 'remove-gallery-btn')
+  removeGalleryBtn.setAttribute('type', 'button')
+  removeGalleryBtn.setAttribute('value', 'Supprimer la gallerie')
 
   editButton.appendChild(modal)
   modal.appendChild(wrapper)
   wrapper.appendChild(closeBtn)
   closeBtn.appendChild(closeBtnImg)
   wrapper.appendChild(title)
-  wrapper.appendChild(thumbnailPortfolio)
-  wrapper.appendChild(trashIconContainer)
-  trashIconContainer.appendChild(trashIcon)
+  wrapper.appendChild(thumbnailPortfolio, displayPortfolioThumbnails())
   wrapper.appendChild(addWorkBtn)
-  wrapper.appendChild(removeGallery)
+  wrapper.appendChild(removeGalleryBtn)
+  title.focus()
 }
