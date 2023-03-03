@@ -1,12 +1,12 @@
 import createModale from './createModale.js'
-import addCloseModaleListener from './addCloseModaleListener.js'
 
 export default function addEditListener () {
   const editButton = document.querySelector('.edit-projects-btn a')
+  const modal = document.querySelector('.modal')
 
   editButton.addEventListener('click', (event) => {
-    event.preventDefault()
-    createModale()
-    addCloseModaleListener()
+    if (typeof (modal) !== 'undefined' || modal !== null) {
+      createModale()
+    }
   })
 }

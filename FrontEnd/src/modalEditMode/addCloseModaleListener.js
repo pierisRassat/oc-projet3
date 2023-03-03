@@ -1,14 +1,8 @@
-export default function addCloseModaleListener () {
-  const closeBtn = document.querySelector('.close-modal-btn')
-
+export default function addCloseModaleListener (closeBtn) {
   closeBtn.addEventListener('click', (event) => {
-    const modal = document.querySelectorAll('.modal')
-    event.preventDefault()
-    console.log('closeBtn clicked')
+    const modal = document.querySelector('.modal')
     if (typeof (modal) !== 'undefined' && modal !== null) {
-      console.log('modal is not null')
-      modal.classList.remove('modal')
-      modal.classList.add('hidden')
+      modal.remove()
     }
   })
 }

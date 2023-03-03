@@ -1,8 +1,8 @@
+import addWindowCloseModaleListener from './addWindowCloseModaleListener.js'
 import { displayPortfolioThumbnails } from './portfolioThumbnails.js'
+import addCloseModaleListener from './addCloseModaleListener.js'
 
 export default function createModale () {
-  const editButton = document.querySelector('.edit-projects-btn a')
-
   const modal = document.createElement('div')
   modal.setAttribute('class', 'modal')
 
@@ -31,7 +31,7 @@ export default function createModale () {
   removeGalleryBtn.setAttribute('type', 'button')
   removeGalleryBtn.setAttribute('value', 'Supprimer la gallerie')
 
-  editButton.appendChild(modal)
+  document.querySelector('body').appendChild(modal)
   modal.appendChild(wrapper)
   wrapper.appendChild(closeBtn)
   closeBtn.appendChild(closeBtnImg)
@@ -40,4 +40,6 @@ export default function createModale () {
   wrapper.appendChild(addWorkBtn)
   wrapper.appendChild(removeGalleryBtn)
   title.focus()
+  addCloseModaleListener(closeBtn)
+  addWindowCloseModaleListener()
 }
