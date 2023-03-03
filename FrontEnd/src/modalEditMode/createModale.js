@@ -22,7 +22,7 @@ export default function createModale () {
   thumbnailPortfolio.setAttribute('class', 'thumbnail-portfolio-container')
 
   const addWorkBtn = document.createElement('input')
-  addWorkBtn.setAttribute('class', 'add-work-btn')
+  addWorkBtn.setAttribute('id', 'add-work-btn')
   addWorkBtn.setAttribute('type', 'submit')
   addWorkBtn.setAttribute('value', 'Ajouter une photo')
 
