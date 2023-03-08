@@ -2,6 +2,7 @@ import { initRadioInputs, handleRadioChange } from './categories/handleRadioChan
 import displayPortfolioFilter from './categories/categories.js' // display portfolio filters
 import { displayPortfolio } from './works/portfolio.js' // display portfolio gallery
 import { checkLocalStorageToken } from './isLogged/isLogged.js' // check if the user is logged
+// import createAddWorkModale from './addWork/createAddWorkForm.js' // test for addWork modale
 
 checkLocalStorageToken() // is user logged ?
 

@@ -1,6 +1,7 @@
 import addWindowCloseModaleListener from './addWindowCloseModaleListener.js'
 import { displayPortfolioThumbnails } from './portfolioThumbnails.js'
 import addCloseModaleListener from './addCloseModaleListener.js'
+import addAddWorkButtonListener from '../addWork/addAddWorkModalListener.js'
 
 export default function createModale () {
   const modal = document.createElement('div')
@@ -42,4 +43,5 @@ export default function createModale () {
   title.focus()
   addCloseModaleListener(closeBtn)
   addWindowCloseModaleListener()
+  addAddWorkButtonListener()
 }

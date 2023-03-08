@@ -1,3 +1,4 @@
+import addDeleteListeners from '../deleteWork/addDeleteListener.js'
 import clearThumbnailGallery from './clearThumbnailGallery.js'
 import getPortfolio from '../works/requestPortfolio.js'
 
@@ -29,4 +30,5 @@ export const displayPortfolioThumbnails = async categoryId => {
     trashIconContainer.appendChild(trashIcon)
     fig.appendChild(caption)
   })
+  addDeleteListeners()
 }

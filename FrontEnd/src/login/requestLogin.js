@@ -17,12 +17,12 @@ export default async function handleLoginFormSubmit () {
 
     if (response.ok) {
       const token = await response.json()
-      window.localStorage.setItem('token', token)
-      window.location.href = 'index.html'
+      window.sessionStorage.setItem('token', token)
+      window.location.href = '.'
+      console.log(token)
     } else {
       const errorMessage = await response.json().message
       window.alert('Email ou mot de passe incorrect')
-      window.message('Allo ?')
       console.error(errorMessage)
     }
   })

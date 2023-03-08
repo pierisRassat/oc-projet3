@@ -27,8 +27,8 @@ export function createEditionProjectsButton () {
 
   const divEditButton = document.querySelector('.edit-projects-btn')
 
-  const navLink = document.createElement('a')
-  navLink.setAttribute('href', '#modaleWorks')
+  const navLink = document.createElement('button')
+  navLink.setAttribute('class', 'edit-projects-btn')
 
   const editionIcon = document.createElement('img')
   editionIcon.setAttribute('src', './assets/icons/black-edit.svg')
@@ -46,5 +46,4 @@ export function createEditionProjectsButton () {
 export function replaceLoginElement () {
   const loginButton = document.querySelector('nav ul li#login ')
   loginButton.textContent = 'logout'
-
 }

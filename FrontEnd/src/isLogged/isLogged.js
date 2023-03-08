@@ -4,13 +4,13 @@ import addLoginListener from '../login/addLoginListener.js'
 import addEditListener from '../modalEditMode/addEditListener.js'
 
 export function checkLocalStorageToken () {
-  const isTokenStored = window.localStorage.getItem('token')
+  const isTokenStored = window.sessionStorage.getItem('token')
   if (isTokenStored) {
     createEditionBanner()
     createEditionButton()
     createEditionProjectsButton()
     replaceLoginElement()
-   addEditListener()
+    addEditListener()
   } else {
     addLoginListener()
   }
