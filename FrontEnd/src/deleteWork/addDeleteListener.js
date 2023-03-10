@@ -3,12 +3,11 @@ import getWorkNumber from './requestWorkNumber.js'
 
 export default async function addDeleteListeners () {
   const deleteButtons = document.querySelectorAll('.trash-icon-container')
-  let listenerNumber = await getWorkNumber()
+  const ids = await getWorkNumber()
 
-  deleteButtons.forEach((button) => {
+  deleteButtons.forEach((button, index) => {
     button.addEventListener('click', (event) => {
-      deleteWork(listenerNumber)
-      listenerNumber++
+      deleteWork(ids[index])
     })
   })
 }

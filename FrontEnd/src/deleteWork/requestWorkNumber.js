@@ -10,6 +10,6 @@ export default async function getWorkNumber () {
     throw new Error(`Error: ${response.status}`)
   }
   const data = await response.json()
-  const number = data.find(({ id }) => id).id
-  return number
+  const ids = data.map(({ id }) => id)
+  return ids
 }

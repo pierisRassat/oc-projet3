@@ -430,6 +430,16 @@ button#submit-button-add-work-form {
     font-size: 14px;
     margin: 32px 0 55px 0;
 }
+.add-work-file-input-container {
+    width: 420px;
+    height: 169px;
+}
+img.add-work-preview-img {
+    display: flex;
+    align-self: center;
+    width: 129px;
+    height: 100%;
+}
 .portfolio-filter {
     display: flex;
     margin: 2em 0 2em;

@@ -2,6 +2,7 @@ import addWorkWindowCloseModaleListener from './addWorkWindowCloseModaleListener
 import addWorkBackModaleListener from './addWorkBackModaleListener.js'
 import addWorkCloseModaleListener from './addWorkCloseModaleListener.js'
 import { getCategories } from '../categories/requestCategories.js'
+import initAddWorkForm from './handleAddWorkForm.js'
 
 async function getCategoriesData () {
   const data = await getCategories()
@@ -115,4 +116,5 @@ export default async function createAddWorkModale () {
   addWorkBackModaleListener(backBtn)
   addWorkCloseModaleListener(closeBtn)
   addWorkWindowCloseModaleListener()
+  initAddWorkForm()
 }
