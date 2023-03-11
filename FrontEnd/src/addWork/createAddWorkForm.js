@@ -6,6 +6,9 @@ import initAddWorkForm from './handleAddWorkForm.js'
 
 async function getCategoriesData () {
   const data = await getCategories()
+
+  console.log('data fetched in createAddWorkForm.js')
+
   return data
 }
 getCategoriesData()

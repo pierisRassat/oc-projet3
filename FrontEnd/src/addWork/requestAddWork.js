@@ -5,16 +5,17 @@ export default async function addWork () {
 
   const formData = new FormData()
 
-  const fileInput = document.querySelector('input[name="add-work-file"]')
-  const file = fileInput.files[0]
-  formData.append('file', file)
-
   const titleInput = document.querySelector('input[name="add-work-title-input"]')
   const title = titleInput.value
-  formData.append('title', title)
+
+  const fileInput = document.querySelector('input[name="add-work-file"]')
+  const file = fileInput.files[0]
 
   const categorySelect = document.querySelector('select[id="add-work-categorie-select"]')
   const category = categorySelect.value
+
+  formData.append('title', title)
+  formData.append('image', file)
   formData.append('category', category)
 
   console.log(formData)
@@ -24,14 +25,13 @@ export default async function addWork () {
     await fetch(endpointUrl, {
       method: 'POST',
       headers: {
-        accept: 'application/json',
-        Authorization: `Bearer ${tokenStr}`,
-        'Content-Type': 'multipart/form-data'
+        Authorization: `Bearer ${tokenStr}`
       },
       body: formData
     })
     const addWorkModal = document.querySelector('.add-work-modal')
     if (typeof addWorkModal !== 'undefined' && addWorkModal !== null) {
+      addWorkModal.remove()
       createAddWorkModale()
     }
   } catch (error) {
