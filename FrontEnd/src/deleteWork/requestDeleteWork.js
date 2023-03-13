@@ -1,3 +1,4 @@
+import { displayPortfolio } from '../works/portfolio.js'
 import createModale from '../modalEditMode/createModale.js'
 
 export default async function deleteWork (listenerNumber) {
@@ -14,7 +15,9 @@ export default async function deleteWork (listenerNumber) {
     })
     const modal = document.querySelector('.modal')
     if (typeof (modal) !== 'undefined' || modal !== null) {
+      modal.remove()
       createModale()
+      displayPortfolio()
     }
   } catch (error) {
     console.error(error)

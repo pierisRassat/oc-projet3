@@ -1,4 +1,4 @@
-import createAddWorkModale from '../addWork/createAddWorkForm.js'
+import { displayPortfolio } from '../works/portfolio.js'
 
 export default async function addWork () {
   const endpointUrl = 'http://localhost:5678/api/works'
@@ -30,10 +30,14 @@ export default async function addWork () {
       body: formData
     })
     const addWorkModal = document.querySelector('.add-work-modal')
+    const modal = document.querySelector('.modal')
     if (typeof addWorkModal !== 'undefined' && addWorkModal !== null) {
       addWorkModal.remove()
-      createAddWorkModale()
     }
+    if (typeof modal !== 'undefined' && modal !== null) {
+      modal.remove()
+    }
+    displayPortfolio()
   } catch (error) {
     console.error(error)
   }

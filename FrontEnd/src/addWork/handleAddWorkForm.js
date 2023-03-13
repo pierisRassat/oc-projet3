@@ -1,6 +1,10 @@
 import addWork from './requestAddWork.js'
 
 export default function initAddWorkForm () {
+  const addWorkModal = document.querySelector('.modal-add-work')
+  if (!addWorkModal) {
+    return
+  }
   const submitButton = document.querySelector('#submit-button-add-work-form')
 
   function validateForm () {

@@ -119,5 +119,11 @@ export default async function createAddWorkModale () {
   addWorkBackModaleListener(backBtn)
   addWorkCloseModaleListener(closeBtn)
   addWorkWindowCloseModaleListener()
-  initAddWorkForm()
+
+  const modal = document.querySelector('.modal')
+  modal.style.display = 'none'
+
+  if (typeof (addWorkModal) !== 'undefined' || addWorkModal !== null) {
+    initAddWorkForm() // fileInput is null (type error)
+  }
 }
