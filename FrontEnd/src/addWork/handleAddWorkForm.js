@@ -1,13 +1,13 @@
 import addWork from './requestAddWork.js'
 
 export default function initAddWorkForm () {
-  const addWorkModal = document.querySelector('.modal-add-work')
-  if (!addWorkModal) {
-    return
-  }
   const submitButton = document.querySelector('#submit-button-add-work-form')
 
   function validateForm () {
+    const addWorkModal = document.querySelector('.add-work-modal')
+    if (!addWorkModal) {
+      return
+    }
     const fileInput = document.querySelector('input[name="add-work-file"]')
     const titleInput = document.querySelector('input[name="add-work-title-input"]')
     const categorySelect = document.querySelector('select[id="add-work-categorie-select"]')
