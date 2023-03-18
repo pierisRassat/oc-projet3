@@ -1,9 +1,9 @@
-import addWindowCloseModaleListener from './addWindowCloseModaleListener.js'
+import addWindowCloseModalListener from './addWindowCloseModalListener.js'
 import { displayPortfolioThumbnails } from './portfolioThumbnails.js'
-import addCloseModaleListener from './addCloseModaleListener.js'
+import addCloseModalListener from './addCloseModalListener.js'
 import addAddWorkButtonListener from '../addWork/addAddWorkModalListener.js'
 
-export default function createModale () {
+export default function createModal () {
   const modal = document.createElement('div')
   modal.setAttribute('class', 'modal')
 
@@ -41,7 +41,7 @@ export default function createModale () {
   wrapper.appendChild(addWorkBtn)
   wrapper.appendChild(removeGalleryBtn)
   title.focus()
-  addCloseModaleListener(closeBtn)
-  addWindowCloseModaleListener()
+  addCloseModalListener(closeBtn)
+  addWindowCloseModalListener()
   addAddWorkButtonListener()
 }

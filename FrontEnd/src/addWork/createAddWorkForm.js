@@ -1,19 +1,16 @@
-import addWorkWindowCloseModaleListener from './addWorkWindowCloseModaleListener.js'
-import addWorkBackModaleListener from './addWorkBackModaleListener.js'
-import addWorkCloseModaleListener from './addWorkCloseModaleListener.js'
+import addWorkWindowCloseModalListener from './addWorkWindowCloseModalListener.js'
+import addWorkBackModalListener from './addWorkBackModalListener.js'
+import addWorkCloseModalListener from './addWorkCloseModalListener.js'
 import { getCategories } from '../categories/requestCategories.js'
 import initAddWorkForm from './handleAddWorkForm.js'
 
 async function getCategoriesData () {
   const data = await getCategories()
-
-  console.log('data fetched in createAddWorkForm.js')
-
   return data
 }
 getCategoriesData()
 
-export default async function createAddWorkModale () {
+export default async function createAddWorkModal () {
   const addWorkModal = document.createElement('div')
   addWorkModal.setAttribute('class', 'add-work-modal')
 
@@ -116,14 +113,14 @@ export default async function createAddWorkModale () {
   addWorkWrapper.appendChild(addWorkTitle)
   addWorkWrapper.appendChild(addWorkForm)
   addWorkWrapper.appendChild(submitButton)
-  addWorkBackModaleListener(backBtn)
-  addWorkCloseModaleListener(closeBtn)
-  addWorkWindowCloseModaleListener()
+  addWorkBackModalListener(backBtn)
+  addWorkCloseModalListener(closeBtn)
+  addWorkWindowCloseModalListener()
 
   const modal = document.querySelector('.modal')
   modal.style.display = 'none'
 
   if (typeof (addWorkModal) !== 'undefined' || addWorkModal !== null) {
-    initAddWorkForm() // fileInput is null (type error)
+    initAddWorkForm()
   }
 }

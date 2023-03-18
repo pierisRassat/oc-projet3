@@ -1,4 +1,4 @@
-export default function addWorkCloseModaleListener (closeBtn) {
+export default function addWorkCloseModalListener (closeBtn) {
   closeBtn.addEventListener('click', (event) => {
     const addWorkModal = document.querySelector('.add-work-modal')
     if (typeof (addWorkModal) !== 'undefined' && addWorkModal !== null) {

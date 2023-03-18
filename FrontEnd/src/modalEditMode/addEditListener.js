@@ -1,4 +1,4 @@
-import createModale from './createModale.js'
+import createModal from './createModal.js'
 
 export default function addEditListener () {
   const editButton = document.querySelector('.edit-projects-btn button')
@@ -6,7 +6,7 @@ export default function addEditListener () {
 
   editButton.addEventListener('click', (event) => {
     if (typeof (modal) !== 'undefined' || modal !== null) {
-      createModale()
+      createModal()
     }
   })
 }

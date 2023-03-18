@@ -1,4 +1,4 @@
-export default function addWindowCloseModaleListener () {
+export default function addWindowCloseModalListener () {
   const modal = document.querySelector('.modal')
 
   modal.addEventListener('click', (event) => {

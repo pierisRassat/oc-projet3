@@ -1,4 +1,4 @@
-export default function addWorkWindowCloseModaleListener () {
+export default function addWorkWindowCloseModalListener () {
   const addWorkModal = document.querySelector('.add-work-modal')
 
   addWorkModal.addEventListener('click', (event) => {

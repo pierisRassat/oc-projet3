@@ -1,4 +1,4 @@
-export default function addWorkBackModaleListener (backBtn) {
+export default function addWorkBackModalListener (backBtn) {
   backBtn.addEventListener('click', (event) => {
     const addWorkModal = document.querySelector('.add-work-modal')
     if (typeof (addWorkModal) !== 'undefined' && addWorkModal !== null) {
