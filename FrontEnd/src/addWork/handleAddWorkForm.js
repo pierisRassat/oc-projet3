@@ -63,6 +63,10 @@ export default function initAddWorkForm () {
 
   document.querySelectorAll('input, select').forEach((element) => {
     element.addEventListener('change', () => {
+      const addWorkModal = document.querySelector('.add-work-modal')
+      if (!addWorkModal) {
+        return
+      }
       validateForm()
       if (element.name === 'add-work-file') {
         displayImagePreview()
